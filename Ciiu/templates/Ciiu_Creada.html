@@ -1,0 +1,20 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+    <h1>{{Actividades.actividad}}</h1>
+    {{error}}
+    <form method="POST">
+        {% csrf_token %}  
+        {{form.as_p}}
+        <button>
+            Modificar
+        </button>
+    </form>
+    <form action="{% url 'Elimina_Ciiu' Actividades.id %}"method="POST">
+        {% csrf_token %}
+        <button>
+            Eliminar
+        </button>
+    </form>
+{% endblock %}

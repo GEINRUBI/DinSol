@@ -1,0 +1,21 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <div class="col-md-4" offset-md-4>
+            <form action="/Registrar_Usuario/" method="POST" class="card card-body text-center">
+                <h1>Registrar Usuario</h1>
+                {{error}}
+                {% csrf_token %}
+                {{form}}
+                <button>
+                    Registrar
+                </button>
+            </form>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

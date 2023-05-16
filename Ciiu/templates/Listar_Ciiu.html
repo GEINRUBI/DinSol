@@ -1,0 +1,16 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+<h1> Lista de Ciiu</h1>
+
+<ul>
+    {% for Lista in Listas %}
+    <li>
+        <a href="{% url 'Ciiu_Creada' Lista.id %}">
+            <h1>{{Lista.codigo}}</h1>
+            <p>{{Lista.actividad}}</p>
+        </a>
+    </li>
+    {% endfor%}
+</ul>
+{% endblock %}

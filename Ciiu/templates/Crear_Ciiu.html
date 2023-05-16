@@ -1,0 +1,12 @@
+{% extends 'Base.html' %}
+{% block content %}
+<h1> Crear Ciiu</h1>
+{{error}}
+<form action="/Ciiu/Crear/" method="POST">
+    {% csrf_token %}
+{{form}}
+<button>
+    Guardar
+</button>
+</form>
+{% endblock %}
