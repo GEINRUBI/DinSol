@@ -100,9 +100,9 @@ DATABASES = {
     #     'PORT': '3050',
     #     'OPTIONS': {'charset': 'ISO8859_1'},
     # },
-    # 'default': dj_database_url.config(   default='postgresql://postgres:postgres@localhost:5432/mysite',        conn_max_age=600),
+    'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/mysite',        conn_max_age=600),
 
-    'default': dj_database_url.config(default='firebird://firebird:firebird@localhost:3050/firebird'),
+    # 'default': dj_database_url.config(default='firebird://firebird:firebird@localhost:3050/firebird'),
 
     # 'default': {
     #     'ENGINE': 'django.db.backends.sqlite3',
